@@ -1,12 +1,12 @@
 
 var words = document.getElementById('input'); 
-var button = document.getElementById('button');
+var button = document.getElementById('button1');
 console.log(words);
 
 words.addEventListener('keyup', function(event) {
   console.log(words.value);
   var wordsValue = words.value;
-  if ((event.keyCode !== 32) && (event.keyCode < 65) || (event.keyCode > 90) && (event.keyCode < 97) || (event.keyCode > 122) || wordsValue === '') {
+  if ((event.keyCode !== 32) && (event.keyCode < 65) || (event.keyCode > 90) && (event.keyCode < 97) || (event.keyCode > 122) || wordsValue.length < 0 || event.keyCode === 32) {
     alert('error: ingrese solo letras!');
   } else {
     wordsValue;
